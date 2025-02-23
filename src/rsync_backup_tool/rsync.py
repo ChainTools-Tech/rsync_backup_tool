@@ -64,7 +64,7 @@ class RsyncBackupTool:
         if pull_entire_folder:
             source = f"{host}:{path}/"  # Include trailing slash for entire folder
         else:
-            source = f"{host}:{path}/."  # Use trailing slash and dot for files only
+            source = f"{host}:{path}/*"  # No trailing slash for files only
 
         # Construct the destination path
         dest_path = f"{destination}/{host}{path}"
@@ -78,8 +78,14 @@ class RsyncBackupTool:
             "rsync", "-avz", "--progress", "-e", "ssh",
             "--rsync-path", "sudo rsync",
             "--partial", "--timeout=60",  # Handle interruptions gracefully
-            source, dest_path
         ]
+
+        # Exclude subdirectories if pull_entire_folder is False
+        if not pull_entire_folder:
+            command.append("--exclude=*/")  # Exclude all subdirectories
+
+        # Add source and destination to the command
+        command.extend([source, dest_path])
 
         logger.info(f"Synchronizing {host}:{path}")
         logger.debug(f"Running command: {' '.join(command)}")
