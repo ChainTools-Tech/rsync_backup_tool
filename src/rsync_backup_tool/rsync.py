@@ -3,6 +3,7 @@ import tempfile
 import os
 import logging
 
+from typing import Dict, Any, List
 from rsync_backup_tool.utils import generate_timestamp
 
 
