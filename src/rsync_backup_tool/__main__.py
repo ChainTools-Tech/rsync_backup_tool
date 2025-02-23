@@ -6,13 +6,13 @@ from rsync_backup_tool.rsync import RsyncBackupTool
 
 def main():
     # Parse command-line arguments
-    args = command_line_parser()
-
-    # Set up logging
-    initialize_loggers(args.config)
+    cmdargs = command_line_parser()
 
     # Load the configuration
-    config = load_config(args.config)
+    config = load_config(cmdargs.config)
+
+    # Set up logging
+    initialize_loggers(config)
 
     # Run the backup tool
     backup_tool = RsyncBackupTool(config)

@@ -1,16 +1,16 @@
 import logging
 import os
-from typing import Dict, Any
 
 from rsync_backup_tool.utils import ensure_directory
 
 
-def initialize_loggers(config: Dict[str, Any]):
+def initialize_loggers(config):
     # Ensure log directory exists
-    log_directory = ensure_directory(config.get("log_directory", "logs"))
+    log_directory = ensure_directory(config.get("log_directory", ".logs"))
 
     # Configure the main logger
-    main_log_file = os.path.join(log_directory, "rsync_backup_tool.log")
+    log_file = config.get("log_file", "rsync_backup_tool.log")
+    main_log_file = os.path.join(log_directory, log_file)
     main_logger = logging.getLogger("rsync_backup_tool")
     main_logger.setLevel(logging.INFO)
 
