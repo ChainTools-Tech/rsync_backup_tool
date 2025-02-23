@@ -74,7 +74,7 @@ class RsyncBackupTool:
             "--rsync-path", "sudo rsync",
             "--partial", "--timeout=60",  # Handle interruptions gracefully
             "--files-from", temp_file_path,  # Use the temporary file as the list of folders
-            f"{host}:./",  # Source is the root of the remote server
+            f"{host}:",  # Source is the root of the remote server
             f"{destination}/{host}/"  # Destination is the host-specific folder
         ]
 
