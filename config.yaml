@@ -210,4 +210,3 @@ hosts:
   con-node-03.qf3l3k.cloud:
     specific_folders:
       - { path: /etc/caddy, pull_entire_folder: true }
-      - { path: /home/pactus/pactus/wallets, pull_entire_folder: false }
