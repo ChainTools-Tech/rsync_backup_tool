@@ -12,7 +12,17 @@ hosts:
     specific_folders:
       - { path: /data/osmosis/.osmosisd/config, pull_entire_folder: false }
       - { path: /data/osmosis/.osmosisd/data, pull_entire_folder: false }
+      - { path: /home/relayer/.hermes, pull_entire_folder: true }
   htz-host-02.qf3l3k.cloud:
     specific_folders:
-      - { path: /data/beezee/.bzed/config, pull_entire_folder: false }
-      - { path: /data/beezee/.bzed/data, pull_entire_folder: false }
+      - { path: /data/osmosis/.osmosisd/config, pull_entire_folder: false }
+      - { path: /data/osmosis/.osmosisd/data, pull_entire_folder: false }
+      - { path: /data/beezee/.bze/config, pull_entire_folder: false }
+      - { path: /data/beezee/.bze/data, pull_entire_folder: false }
+      - { path: /home/relayer/.hermes, pull_entire_folder: true }
+  htz-host-03.qf3l3k.cloud:
+    specific_folders:
+      - { path: /data/osmosis/.osmosisd/config, pull_entire_folder: false }
+      - { path: /data/osmosis/.osmosisd/data, pull_entire_folder: false }
+      - { path: /home/relayer/.hermes, pull_entire_folder: true }
+
