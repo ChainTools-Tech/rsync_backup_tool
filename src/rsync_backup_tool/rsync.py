@@ -89,11 +89,20 @@ class RsyncBackupTool:
 
         logger.info(f"Synchronizing {host}:{path}")
         logger.debug(f"Running command: {' '.join(command)}")
-        result = subprocess.run(command, stderr=subprocess.PIPE)
+
+        # Redirect rsync output to a separate log file
+        rsync_log_file = os.path.join(self.config.get("log_directory", "logs"), "rsync.log")
+        with open(rsync_log_file, "a") as rsync_log:
+            result = subprocess.run(
+                command,
+                stdout=rsync_log,  # Redirect stdout to the log file
+                stderr=rsync_log,  # Redirect stderr to the log file
+            )
 
         # Check for errors
         if result.returncode != 0:
             logger.error(f"Error occurred while syncing {host}:{path}:")
-            logger.error(result.stderr.decode())
+            with open(rsync_log_file, "r") as rsync_log:
+                logger.error(rsync_log.read())
         else:
             logger.info(f"Successfully synced {host}:{path}")
