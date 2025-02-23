@@ -1,6 +1,7 @@
 destination: /home/qf3l3k/backup
 log_directory: /home/qf3l3k/.logs/
 log_file: rsync_backup_tool.log
+log_level: DEBUG
 
 common_folders:
   - { path: /etc/ufw, pull_entire_folder: true }

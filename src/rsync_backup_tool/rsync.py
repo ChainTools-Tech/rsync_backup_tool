@@ -41,6 +41,7 @@ class RsyncBackupTool:
             for folder in folder_config:
                 path = folder["path"]
                 pull_entire_folder = folder.get("pull_entire_folder", False)
+                logger.debug(f"Pulling files/folders.", extra={"path": path, "pull_entire_folder": pull_entire_folder})
 
                 # Check if the folder exists on the remote server
                 check_command = [
@@ -55,18 +56,22 @@ class RsyncBackupTool:
 
                 # Write the folder to the temporary file
                 if pull_entire_folder:
+                    logger.debug(f"Pulling {host}:{path}")
                     temp_file.write(f"{path}/\n")  # Include trailing slash for entire folder
                 else:
+                    logger.debug(f"Pulling {host}:{path}")
                     temp_file.write(f"{path}\n")  # No trailing slash for files only
 
                 # Construct the destination path
                 dest_path = f"{destination}/{host}{path}"
+                logger.debug(f"Copying {host}:{path} to {dest_path}")
 
                 # Create the destination directory if it doesn't exist
                 os.makedirs(dest_path, exist_ok=True)
 
             # Get the path to the temporary file
             temp_file_path = temp_file.name
+            logger.debug(f"Temporary file: {temp_file_path}")
 
         # Construct the rsync command
         command = [
@@ -78,7 +83,8 @@ class RsyncBackupTool:
             f"{destination}/{host}/"  # Destination is the host-specific folder
         ]
 
-        logger.info(f"Running command: {' '.join(command)}")
+        logger.info(f"Synchronizing files.")
+        logger.debug(f"Running command: {' '.join(command)}")
         result = subprocess.run(command, stderr=subprocess.PIPE)
 
         # Check for errors
