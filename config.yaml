@@ -13,6 +13,7 @@ hosts:
     specific_folders:
       - { path: /data/osmosis/.osmosisd/config, pull_entire_folder: false }
       - { path: /data/osmosis/.osmosisd/data, pull_entire_folder: false }
+      - { path: /etc/caddy, pull_entire_folder: true }
       - { path: /home/relayer/.hermes, pull_entire_folder: true }
       - { path: /home/entangle/.entangled/config, pull_entire_folder: false }
       - { path: /home/entangle/.entangled/data, pull_entire_folder: false }
@@ -24,11 +25,13 @@ hosts:
       - { path: /data/osmosis/.osmosisd/data, pull_entire_folder: false }
       - { path: /data/beezee/.bze/config, pull_entire_folder: false }
       - { path: /data/beezee/.bze/data, pull_entire_folder: false }
+      - { path: /etc/caddy, pull_entire_folder: true }
       - { path: /home/relayer/.hermes, pull_entire_folder: true }
   htz-host-03.qf3l3k.cloud:
     specific_folders:
       - { path: /data/osmosis/.osmosisd/config, pull_entire_folder: false }
       - { path: /data/osmosis/.osmosisd/data, pull_entire_folder: false }
+      - { path: /etc/caddy, pull_entire_folder: true }
       - { path: /home/relayer/.hermes, pull_entire_folder: true }
   ovh-host-01.qf3l3k.cloud:
     specific_folders:
@@ -88,6 +91,7 @@ hosts:
       - { path: /home/starname/.starnamed/data, pull_entire_folder: false }
   ovh-host-05.qf3l3k.cloud:
     specific_folders:
+      - { path: /etc/caddy, pull_entire_folder: true }
       - { path: /home/tenderduty/.tenderduty, pull_entire_folder: false }
   ovh-host-06.qf3l3k.cloud:
     specific_folders:
@@ -202,3 +206,13 @@ hosts:
   con-node-02.qf3l3k.cloud:
     specific_folders:
       - { path: /home/waves/.local/etc, pull_entire_folder: true }
+  con-node-03.qf3l3k.cloud:
+    specific_folders:
+      - { path: /etc/caddy, pull_entire_folder: true }
+      - { path: /home/emoney/.emd/config, pull_entire_folder: false }
+      - { path: /home/emoney/.emd/data, pull_entire_folder: false }
+      - { path: /home/furya/.furyad/config, pull_entire_folder: false }
+      - { path: /home/furya/.furyad/data, pull_entire_folder: false }
+      - { path: /home/konstellation/.knstld/config, pull_entire_folder: false }
+      - { path: /home/konstellation/.knstld/data, pull_entire_folder: false }
+      - { path: /home/pactus/pactus/wallets, pull_entire_folder: false }
