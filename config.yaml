@@ -119,6 +119,7 @@ hosts:
       - { path: /home/panacea/.panacea/data, pull_entire_folder: false }
   ovh-host-09.qf3l3k.cloud:
     specific_folders:
+      - { path: /etc/caddy, pull_entire_folder: true }
       - { path: /home/t-atomone/.atomone/config, pull_entire_folder: false }
       - { path: /home/t-atomone/.atomone/data, pull_entire_folder: false }
       - { path: /home/t-beezee/.tbze/config, pull_entire_folder: false }
