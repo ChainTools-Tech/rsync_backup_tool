@@ -64,7 +64,7 @@ class RsyncBackupTool:
         if pull_entire_folder:
             source = f"{host}:{path}/"  # Include trailing slash for entire folder
         else:
-            source = f"{host}:{path}/*"  # No trailing slash for files only
+            source = f"{host}:{path}/."  # Use trailing slash and dot for files only
 
         # Construct the destination path
         dest_path = f"{destination}/{host}{path}"
