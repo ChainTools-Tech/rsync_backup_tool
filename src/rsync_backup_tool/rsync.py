@@ -28,8 +28,14 @@ class RsyncBackupTool:
             logger.info(f"Processing host: {host}")
             specific_folders = details.get("specific_folders", [])
 
+            # Log host-specific folders
+            logger.debug(f"Host-specific folders for {host}: {specific_folders}")
+
             # Combine common and host-specific folders
             all_folders = common_folders + specific_folders
+
+            # Log all folders to be synced
+            logger.debug(f"All folders to sync for {host}: {all_folders}")
 
             # Sync each folder individually
             for folder in all_folders:
@@ -43,12 +49,15 @@ class RsyncBackupTool:
         # Check if the folder exists on the remote server
         check_command = [
             "ssh", host,
-            f"test -d {path} && echo exists || echo not_exists"
+            f"sudo test -d {path} && echo exists || echo not_exists"
         ]
+        logger.debug(f"Running folder existence check: {' '.join(check_command)}")
         result = subprocess.run(check_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
         if result.returncode != 0 or result.stdout.decode().strip() != "exists":
             logger.warning(f"Skipping {host}:{path} (does not exist or cannot access)")
+            logger.warning(f"Check command output: {result.stdout.decode().strip()}")
+            logger.warning(f"Check command error: {result.stderr.decode().strip()}")
             return
 
         # Construct the source path
@@ -80,3 +89,5 @@ class RsyncBackupTool:
         if result.returncode != 0:
             logger.error(f"Error occurred while syncing {host}:{path}:")
             logger.error(result.stderr.decode())
+        else:
+            logger.info(f"Successfully synced {host}:{path}")
