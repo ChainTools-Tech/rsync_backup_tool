@@ -1,0 +1,201 @@
+# ===========================
+# 🔹 IDE & Editor Settings 🔹
+# ===========================
+
+# JetBrains IDEs (PyCharm, IntelliJ, etc.)
+.idea/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/shelf
+.idea/**/dictionaries
+.idea/httpRequests
+.idea/caches/
+.idea/**/dataSources/
+.idea/**/sonarlint/
+.idea/**/aws.xml
+.idea/**/contentModel.xml
+.idea/**/gradle.xml
+.idea/**/libraries
+.idea/**/mongoSettings.xml
+
+# Visual Studio Code
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Spyder IDE
+.spyderproject
+.spyproject
+
+# Rope (Python refactoring library)
+.ropeproject/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Eclipse
+.metadata/
+bin/
+tmp/
+
+# ===========================
+# 🔹 Python Build & Packaging 🔹
+# ===========================
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.Python
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so  # Cython extensions
+
+# Build directories & distribution artifacts
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+share/python-wheels/
+MANIFEST
+
+# ===========================
+# 🔹 Dependency Management 🔹
+# ===========================
+
+# Pip, Pipenv, Poetry, PDM
+pip-log.txt
+pip-delete-this-directory.txt
+Pipfile.lock
+poetry.lock
+pdm.lock
+.pdm.toml  # PDM project-wide configurations
+
+# Pyflow & PEP 582
+__pypackages__/
+
+# ===========================
+# 🔹 Testing & Coverage 🔹
+# ===========================
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+dmypy.json
+.dmypy.json
+
+# Mypy type checker
+.mypy_cache/
+.pyre/
+.pytype/
+cython_debug/
+
+# ===========================
+# 🔹 Logs & Temporary Files 🔹
+# ===========================
+
+# Log files
+*.log
+*.out
+*.err
+
+# Log folders
+logs/
+.logs/
+
+# Cache files
+.cache/
+*.pid
+*.seed
+*.bak
+*.swp
+*.swo
+*.swn
+
+# OS-generated files (Mac, Linux, Windows)
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# ===========================
+# 🔹 Framework-Specific 🔹
+# ===========================
+
+# Django
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask
+instance/
+.webassets-cache
+
+# Scrapy
+.scrapy/
+
+# Sphinx Documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# ===========================
+# 🔹 Other Configurations 🔹
+# ===========================
+
+# mkdocs documentation
+/site
+
+# If using Git LFS (remove if not needed)
+.gitattributes
+
+# If using Ansible or Terraform (remove if not needed)
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# ===========================
+# ✅ Recommended Cleanups ✅
+# ===========================
+
+# Uncomment if using Git submodules
+# .gitmodules
+
+# Uncomment if using environment files
+# .env
+# .env.local
+# .env.*.local
+
+# Uncomment if using database files
+# *.sqlite3
+# *.db

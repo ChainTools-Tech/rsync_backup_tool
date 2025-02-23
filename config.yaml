@@ -1,0 +1,15 @@
+destination: /home/qf3l3k/backup
+
+common_folders:
+  - { path: /etc/ufw, pull_entire_folder: true }
+  - { path: /etc/fail2ban, pull_entire_folder: true }
+
+hosts:
+  htz-host-01.qf3l3k.cloud:
+    specific_folders:
+      - { path: /data/osmosis/.osmosisd/config, pull_entire_folder: false }
+      - { path: /data/osmosis/.osmosisd/data, pull_entire_folder: false }
+  htz-host-02.qf3l3k.cloud:
+    specific_folders:
+      - { path: /data/beezee/.bzed/config, pull_entire_folder: false }
+      - { path: /data/beezee/.bzed/data, pull_entire_folder: false }
