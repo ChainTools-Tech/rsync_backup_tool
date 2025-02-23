@@ -1,0 +1,15 @@
+destination: /home/user/backup
+
+common_folders:
+  - { path: /etc/ufw, pull_entire_folder: true }
+  - { path: /etc/fail2ban, pull_entire_folder: true }
+
+hosts:
+  host1.domain.com:
+    specific_folders:
+      - { path: /home/user1/data, pull_entire_folder: false }
+      - { path: /home/user2/data, pull_entire_folder: true }
+  host2.domain.com:
+    specific_folders:
+      - { path: /home/user1/folder, pull_entire_folder: false }
+      - { path: /srv/service/data, pull_entire_folder: false }
