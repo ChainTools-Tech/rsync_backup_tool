@@ -211,3 +211,12 @@ hosts:
   con-node-02.qf3l3k.cloud:
     specific_folders:
       - { path: /home/waves/.local/etc, pull_entire_folder: true }
+  con-node-03.qf3l3k.cloud:
+    specific_folders:
+      - { path: /home/emoney/.emd/config, pull_entire_folder: false }
+      - { path: /home/emoney/.emd/data, pull_entire_folder: false }
+      - { path: /home/furya/.furyad/config, pull_entire_folder: false }
+      - { path: /home/furya/.furyad/data, pull_entire_folder: false }
+      - { path: /home/konstellation/.knstld/config, pull_entire_folder: false }
+      - { path: /home/konstellation/.knstld/data, pull_entire_folder: false }
+      - { path: /home/pactus/pactus/wallets, pull_entire_folder: false }
