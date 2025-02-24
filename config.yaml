@@ -6,6 +6,7 @@ log_level: DEBUG
 common_folders:
   - { path: /etc/fail2ban, pull_entire_folder: true }
   - { path: /etc/ssh, pull_entire_folder: true }
+  - { path: /etc/systemd/system, pull_entire_folder: false }
   - { path: /etc/ufw, pull_entire_folder: true }
 
 hosts:
@@ -92,7 +93,17 @@ hosts:
   ovh-host-05.qf3l3k.cloud:
     specific_folders:
       - { path: /etc/caddy, pull_entire_folder: true }
+      - { path: /home/grpcui/.local/bin, pull_entire_folder: false }
+      - { path: /home/grpcui/grpcui, pull_entire_folder: true }
+      - { path: /home/guniapps/ardor_rewards_calc_web, pull_entire_folder: true }
+      - { path: /home/guniapps/cosmos_gov, pull_entire_folder: true }
+      - { path: /home/healthchecks/healthchecks, pull_entire_folder: false }
+      - { path: /home/healthchecks/healthchecks/hc, pull_entire_folder: false }
       - { path: /home/tenderduty/.tenderduty, pull_entire_folder: false }
+      - { path: /home/websites, pull_entire_folder: false }
+      - { path: /home/websites/chaintools.tech, pull_entire_folder: true }
+      - { path: /home/websites/docs.flora.chaintools.tech, pull_entire_folder: true }
+      - { path: /home/websites/res.chaintools.tech, pull_entire_folder: true }
   ovh-host-06.qf3l3k.cloud:
     specific_folders:
       - { path: /home/bitsong/.bitsongd/config, pull_entire_folder: false }
