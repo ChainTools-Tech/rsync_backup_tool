@@ -117,6 +117,12 @@ hosts:
       - { path: /home/jackal/.canine/data, pull_entire_folder: false }
       - { path: /home/panacea/.panacea/config, pull_entire_folder: false }
       - { path: /home/panacea/.panacea/data, pull_entire_folder: false }
+  ovh-host-08.qf3l3k.cloud:
+    specific_folders:
+      - { path: /home/quicksilver/.quicksilverd/config, pull_entire_folder: false }
+      - { path: /home/quicksilver/.quicksilverd/data, pull_entire_folder: false }
+      - { path: /home/picasso/.banksy/config, pull_entire_folder: false }
+      - { path: /home/picasso/.banksy/data, pull_entire_folder: false }
   ovh-host-09.qf3l3k.cloud:
     specific_folders:
       - { path: /etc/caddy, pull_entire_folder: true }
@@ -144,8 +150,6 @@ hosts:
     specific_folders:
       - { path: /home/crescent/.crescent/config, pull_entire_folder: false }
       - { path: /home/crescent/.crescent/data, pull_entire_folder: false }
-      - { path: /home/composable/.banksy/config, pull_entire_folder: false }
-      - { path: /home/composable/.banksy/data, pull_entire_folder: false }
       - { path: /home/ixo/.ixod/config, pull_entire_folder: false }
       - { path: /home/ixo/.ixod/data, pull_entire_folder: false }
       - { path: /home/oraichain/.oraid/config, pull_entire_folder: false }
@@ -207,6 +211,3 @@ hosts:
   con-node-02.qf3l3k.cloud:
     specific_folders:
       - { path: /home/waves/.local/etc, pull_entire_folder: true }
-  con-node-03.qf3l3k.cloud:
-    specific_folders:
-      - { path: /etc/caddy, pull_entire_folder: true }
