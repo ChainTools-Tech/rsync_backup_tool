@@ -133,6 +133,8 @@ hosts:
       - { path: /home/panacea/.panacea/data, pull_entire_folder: false }
   ovh-host-08.qf3l3k.cloud:
     specific_folders:
+      - { path: /home/lava/.lava/config, pull_entire_folder: false }
+      - { path: /home/lava/.lava/data, pull_entire_folder: false }
       - { path: /home/quicksilver/.quicksilverd/config, pull_entire_folder: false }
       - { path: /home/quicksilver/.quicksilverd/data, pull_entire_folder: false }
       - { path: /home/picasso/.banksy/config, pull_entire_folder: false }
