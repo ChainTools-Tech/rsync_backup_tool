@@ -15,6 +15,7 @@ hosts:
       - { path: /data/osmosis/.osmosisd/config, pull_entire_folder: false }
       - { path: /data/osmosis/.osmosisd/data, pull_entire_folder: false }
       - { path: /etc/caddy, pull_entire_folder: true }
+      - { path: /home/relayer/.config, pull_entire_folder: true }
       - { path: /home/relayer/.hermes, pull_entire_folder: true }
       - { path: /home/relayer/scripts, pull_entire_folder: true }
       - { path: /home/entangle/.entangled/config, pull_entire_folder: false }
@@ -28,6 +29,7 @@ hosts:
       - { path: /data/beezee/.bze/config, pull_entire_folder: false }
       - { path: /data/beezee/.bze/data, pull_entire_folder: false }
       - { path: /etc/caddy, pull_entire_folder: true }
+      - { path: /home/relayer/.config, pull_entire_folder: true }
       - { path: /home/relayer/.hermes, pull_entire_folder: true }
       - { path: /home/relayer/scripts, pull_entire_folder: true }
   htz-host-03.qf3l3k.cloud:
@@ -35,6 +37,7 @@ hosts:
       - { path: /data/osmosis/.osmosisd/config, pull_entire_folder: false }
       - { path: /data/osmosis/.osmosisd/data, pull_entire_folder: false }
       - { path: /etc/caddy, pull_entire_folder: true }
+      - { path: /home/relayer/.config, pull_entire_folder: true }
       - { path: /home/relayer/.hermes, pull_entire_folder: true }
       - { path: /home/relayer/scripts, pull_entire_folder: true }
   ovh-host-01.qf3l3k.cloud:
@@ -146,6 +149,8 @@ hosts:
       - { path: /home/t-atomone/.atomone/data, pull_entire_folder: false }
       - { path: /home/t-beezee/.tbze/config, pull_entire_folder: false }
       - { path: /home/t-beezee/.tbze/data, pull_entire_folder: false }
+      - { path: /home/t-daodiseo/.achilles/config, pull_entire_folder: false }
+      - { path: /home/t-daodiseo/.achilles/data, pull_entire_folder: false }
       - { path: /home/t-jackal/.canine/config, pull_entire_folder: false }
       - { path: /home/t-jackal/.canine/data, pull_entire_folder: false }
       - { path: /home/t-kopi/.kopid/config, pull_entire_folder: false }
