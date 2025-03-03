@@ -199,3 +199,7 @@ celerybeat.pid
 # Uncomment if using database files
 # *.sqlite3
 # *.db
+
+# Uncomment if using configuration files for app
+config.yaml
+config.yml
